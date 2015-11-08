@@ -5,12 +5,14 @@ int sub(int, int);
 
 int main(int argc, char* argv[])
 {
-	if (argc < 2)
+	if (argc < 3)
 		printf("not enough arguemnts");
-	int op1 =10;
-	char *arg0 = argv[0];
+	
+	printf("%s program start \n", argv[0]);
 	char *arg1 = argv[1];
-	int op2 =5;
+	char *arg2 = argv[2];
+	int op1 = atoi(arg1);
+	int op2 = atoi(arg2);
 	int ret0;
 	int ret1;
 	
