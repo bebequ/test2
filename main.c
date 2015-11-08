@@ -2,6 +2,7 @@
 
 int add(int, int);
 int sub(int, int);
+int div(int, int);
 
 int main(int argc, char* argv[])
 {
@@ -18,8 +19,8 @@ int main(int argc, char* argv[])
 	
 	ret0 = add(op1, op2);
 	ret1 = sub(op1, op2);
-	return 0;
 
+	return 0;
 }
 
 int add(int a, int b)
@@ -30,4 +31,13 @@ int add(int a, int b)
 int sub(int a, int b)
 {
 	return a - b;
+}
+
+int div(int a, int b)
+{
+	if(b!= 0)
+		return a /b;
+	else
+		printf("b must be not 0\n");
+	return -1;
 }
