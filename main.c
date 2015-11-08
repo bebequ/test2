@@ -2,6 +2,7 @@
 
 int add(int, int);
 int sub(int, int);
+int mul(int, int);
 
 int main(int argc, char* argv[])
 {
@@ -13,14 +14,16 @@ int main(int argc, char* argv[])
 	
 	int op1 =10;
 	int op2 =5;
-	int ret0;
-	int ret1;
+	int ret0, ret1, ret2;
+
+	ret0 = add(op0, op1);
+	ret1 = sub(op0, op1);
+	ret2 = mul(op0, op1);
 	
-	ret0 = add(op1, op2);
-	ret1 = sub(op1, op2);
+	printf("%d + %d = %d\n", op0, op1, ret0);
+	printf("%d - %d = %d\n", op0, op1, ret1);
+	printf("%d * %d = %d\n", op0, op1, ret2);
 	
-	printf("%d + %d = %d\n", op1, op2, ret0);
-	printf("%d - %d = %d\n", op1, op2, ret1);
 	return 0;
 
 }
@@ -33,4 +36,9 @@ int add(int a, int b)
 int sub(int a, int b)
 {
 	return a - b;
+}
+
+int mul(int a, int b)
+{
+	return a * b;
 }
