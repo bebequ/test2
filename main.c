@@ -2,24 +2,36 @@
 
 int add(int, int);
 int sub(int, int);
-int div(int, int);
 
+int mul(int, int);
+
+
+/**
+ * @brief main function
+ * @param argc
+ * @param argv
+ * @return 
+ */
 int main(int argc, char* argv[])
 {
 	if (argc < 3)
 		printf("not enough arguemnts");
 	
-	printf("%s program start \n", argv[0]);
+	char *arg0 = argv[0];
 	char *arg1 = argv[1];
-	char *arg2 = argv[2];
-	int op1 = atoi(arg1);
-	int op2 = atoi(arg2);
-	int ret0;
-	int ret1;
 	
-	ret0 = add(op1, op2);
-	ret1 = sub(op1, op2);
+	int op1 =10;
+	int op2 =5;
+	int ret0, ret1, ret2;
 
+	ret0 = add(op0, op1);
+	ret1 = sub(op0, op1);
+	ret2 = mul(op0, op1);
+	
+	printf("%d + %d = %d\n", op0, op1, ret0);
+	printf("%d - %d = %d\n", op0, op1, ret1);
+	printf("%d * %d = %d\n", op0, op1, ret2);
+	
 	return 0;
 }
 
@@ -33,11 +45,8 @@ int sub(int a, int b)
 	return a - b;
 }
 
-int div(int a, int b)
+
+int mul(int a, int b)
 {
-	if(b!= 0)
-		return a /b;
-	else
-		printf("b must be not 0\n");
-	return -1;
+	return a * b;
 }
