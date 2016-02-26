@@ -4,7 +4,12 @@ int add(int, int);
 int sub(int, int);
 int mul(int, int);
 
-// main
+/**
+ * @brief main function
+ * @param argc
+ * @param argv
+ * @return 
+ */
 int main(int argc, char* argv[])
 {
 	if (argc < 2)
