@@ -4,6 +4,7 @@ int add(int, int);
 int sub(int, int);
 int mul(int, int);
 
+// main
 int main(int argc, char* argv[])
 {
 	if (argc < 2)
