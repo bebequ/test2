@@ -2,7 +2,9 @@
 
 int add(int, int);
 int sub(int, int);
+
 int mul(int, int);
+
 
 /**
  * @brief main function
@@ -12,7 +14,7 @@ int mul(int, int);
  */
 int main(int argc, char* argv[])
 {
-	if (argc < 2)
+	if (argc < 3)
 		printf("not enough arguemnts");
 	
 	char *arg0 = argv[0];
@@ -31,7 +33,6 @@ int main(int argc, char* argv[])
 	printf("%d * %d = %d\n", op0, op1, ret2);
 	
 	return 0;
-
 }
 
 int add(int a, int b)
@@ -43,6 +44,7 @@ int sub(int a, int b)
 {
 	return a - b;
 }
+
 
 int mul(int a, int b)
 {
